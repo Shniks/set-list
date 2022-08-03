@@ -18,6 +18,13 @@ class ArtistsController < ApplicationController
     @artist = Artist.find(params[:id])
   end
 
+  def update
+    artist = Artist.find(params[:id])
+    artist.update(artist_params)
+
+    redirect_to '/artists'
+  end
+
   def destroy
     Artist.destroy(params[:id])
 
