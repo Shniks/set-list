@@ -7,7 +7,7 @@ RSpec.describe 'When I visit the Artists index page' do
     artist_2 = Artist.create!(name: 'Frida Kahlo')
 
     visit '/artists'
-
+    
     within '.artist_2' do
       click_button 'Delete'
     end
@@ -15,5 +15,6 @@ RSpec.describe 'When I visit the Artists index page' do
     expect(current_path).to eq('/artists')
     expect(page).to have_content(artist_1.name)
     expect(page).to_not have_content(artist_2.name)
+    expect(page).to_not have_content('.artist_2')
   end
 end

@@ -3,5 +3,6 @@
 <% @artists.each do |artist| %>
   <div class = 'artist_<%= artist.id %>'>
     <h2><%= artist.name %></h2>
+    <%= button_to 'Delete', "/artists/#{artist.id}", method: :delete %>
   </div>
 <% end %>
