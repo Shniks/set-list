@@ -21,4 +21,4 @@ RSpec.describe 'When I visit the artists Index' do
       expect(page).to have_content('Banksy')
     end
   end
-end 
+end
