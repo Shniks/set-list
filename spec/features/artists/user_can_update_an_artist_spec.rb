@@ -19,6 +19,7 @@ RSpec.describe 'When I visit the artists Index' do
     expect(current_path).to eq('/artists')
     within '.artist_2' do
       expect(page).to have_content('Banksy')
+      expect(page).to_not have_content('Frida Kahlo')
     end
   end
 end
