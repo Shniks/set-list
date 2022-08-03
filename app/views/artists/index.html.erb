@@ -1,0 +1,7 @@
+<%= link_to 'New Artist', '/artists/new' %>
+
+<% @artists.each do |artist| %>
+  <div class = 'artist_<%= artist.id %>'>
+    <h2><%= artist.name %></h2>
+  </div>
+<% end %>
