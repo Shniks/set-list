@@ -7,7 +7,7 @@ RSpec.describe 'When I visit the Artists index page' do
     artist_2 = Artist.create!(name: 'Frida Kahlo')
 
     visit '/artists'
-    
+
     within '.artist_2' do
       click_button 'Delete'
     end
